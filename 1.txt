@@ -1,3 +1,5 @@
+tinyurl.com/selab08
+
 I)Jenkins:
 pre requisites:
 1)localhost 8080---tomcat---user if and password
