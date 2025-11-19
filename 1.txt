@@ -41,7 +41,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 cleanWs()
-                git branch: 'master', url: 'https://github.com/savram674/MavenJavaDemo.git'
+                git branch: 'main', url: 'https://github.com/nishneeth/mavenjava.git'
             }
         }
 
