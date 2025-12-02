@@ -1,0 +1,50 @@
+//minikube with ngnix
+minikube start
+kubectl create deployment mynginx --image=nginx
+kubectl expose deployment mynginx --type=NodePort --port=80 --target-port=80
+kubectl get service myngnix
+minikube service myngnix
+
+
+
+//minikube with nagios
+docker pull jasonrivers/nagios:latest
+docker run --name nagiosdemo -p 8888:80 jasonrivers/nagios:latest
+docker stop nagiosdemo
+docker rm nagiosdemo
+
+
+
+//launch instance 
+pem file download paste it in aws folder
+open cmd from that and paste the ssh key 
+in that sudo apt update
+sudo apt-get install docker.io
+sudo apt install git
+sudo apt install nano
+create another folder x
+in x create index.html
+create a repo in GitHub
+open gitbash in x and apply all the commands
+
+then come to cmd  git clone https://github.com/akhilakatakam1/exakhila.git
+ cd exakhila
+ nano dockerfile
+keep docker running
+sudo docker build -t myweb .
+ sudo docker run  -d -p 80:80 myweb
+
+from ngnix:alpine
+copy . /usr/share/ngnix/html
+
+
+
+for tomcat users paste it directly
+<?xml version="1.0" encoding="UTF-8"?>
+<tomcat-users>
+   <role rolename="manager-gui"/>
+   <role rolename="manager-script"/>
+   <role rolename="admin-gui"/>
+   <user password="admin123" roles="manager-gui,manager-script,admin-gui" username="admin"/>
+   
+</tomcat-users>
